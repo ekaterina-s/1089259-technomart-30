@@ -46,11 +46,6 @@
     font-weight: normal;
     color: var(--basic-dark);
     background-color: var(--basic-white);
-
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    align-content: start;
   }
 
   a {
@@ -80,35 +75,42 @@
     outline-offset: -5px;
   }
 
-  .top-header-wrapper {
-    background-color: var(--basic-extra-dark);
-  }
-
   .top-header {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    background-color: var(--basic-extra-dark);
+    margin-bottom: 45px;
 
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
-    color: var(--basic-white);
-
-    /* обводка топ хедер */
-    outline: 5px solid rgba(255, 0, 0, 0.87);
-    outline-offset: -5px;
   }
 
   .main-header-logo {
-    /* background-color: var(--special); */
+    width: 108px;
+    height: 18px;
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    outline-offset: -5px;
+  }
+
+  .container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+  .container-header {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+  .bottom-header {
+    padding-bottom: 5px;
   }
 
   .search-box {
     height: 100%;
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
@@ -129,7 +131,7 @@
   }
 
   .top-header a {
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
@@ -162,19 +164,8 @@
     background-color: var(--button-green-hover);
   }
 
-  /* Main navigation */
-
-  .main-navigation {
-    width: 940px;
-    display: grid;
-    grid-template-columns: 197px 270px 281px;
-    margin: 0 auto;
-    padding: 0 10px;
-    background-color: var(--basic-extra-light);
-  }
-
   .header-description {
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
     line-height: 23px;
     font-weight: normal;
@@ -183,7 +174,7 @@
   }
 
   .header-phone {
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 21px;
     line-height: 30px;
     font-weight: bold;
@@ -217,24 +208,40 @@
     color: var(--credentials-link-click);
   }
 
+    /* Main navigation */
+
   .main-navigation-wrapper {
+    width: 940px;
+    margin: 40px auto 60px auto;
+    padding: 20px 5px;
+
     background-color: var(--basic-dark);
     outline: 5px solid rgba(0, 255, 255, 0.3);
     outline-offset: -5px;
+  }
+
+  .main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .site-navigation {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   .site-navigation a {
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
     color: var(--basic-white);
+
+    margin: 0 30px;
 }
 
   .site-navigation a:hover,
@@ -243,11 +250,6 @@
   }
 
   /* main-part */
-  .container {
-      width: 940px;
-      margin: 0 auto;
-      padding: 0 10px;
-  }
 
   .features {
     margin-bottom: 60px;
@@ -324,7 +326,7 @@
   }
 
   .feature-description {
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
     font-weight: normal;
@@ -336,7 +338,7 @@
   .button {
     width: 192px;
     height: 38px;
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
@@ -370,6 +372,9 @@
     display: grid;
     grid-template-columns: 1fr auto;
     background-color: var(--basic-neutral);
+
+    display: flex;
+    justify-content: space-between;
   }
 
   .popular-item {
@@ -449,7 +454,7 @@
   }
 
   .services h2, .about-company h2, .contacts h2, .about-products h2 {
-    font-family: "Cuprum", "Arial, sans-serif";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
