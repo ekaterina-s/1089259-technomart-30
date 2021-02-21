@@ -8,8 +8,8 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=PT+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,196 +17,263 @@
 <body class="page-body">
   <header class="main-header">
     <div class="top-header">
-      <div class="container-header">
+      <div class="top-header-container">
         <a class="main-header-logo" href="index.html">
-          <img src="img/logo-technomart.svg" width="108" height="18" alt="логотип Техномарт">
+          <svg width="108" height="18" viewBox="0 0 108 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M103.848 2.65853V17.4498H101.735V2.65853H97.978V1.01506H107.604V2.65853H103.848ZM95.7124 11.3572C95.3446 11.819 94.8828 12.1477 94.3272 12.3433C93.7715 12.539 93.1102 12.6368 92.3432 12.6368C91.9832 12.6368 91.5763 12.6133 91.1224 12.5664C90.6685 12.5194 90.2928 12.4646 89.9954 12.402V17.4498H87.8824V1.24984C88.4772 1.07766 89.0759 0.95636 89.6785 0.885926C90.2811 0.815491 90.9346 0.780273 91.6389 0.780273C92.578 0.780273 93.3763 0.8781 94.0337 1.07375C94.6911 1.2694 95.2232 1.59419 95.6302 2.0481C96.0372 2.50201 96.3345 3.10462 96.5224 3.85593C96.7102 4.60723 96.8041 5.53853 96.8041 6.64984C96.8041 7.79245 96.7141 8.74723 96.5341 9.51419C96.3541 10.2811 96.0802 10.8955 95.7124 11.3572ZM94.515 4.5368C94.3976 3.97332 94.2137 3.52723 93.9632 3.19853C93.7128 2.86984 93.3959 2.63897 93.0124 2.50593C92.6289 2.37288 92.1711 2.30636 91.6389 2.30636H89.9954V10.9933H91.6389C92.1711 10.9933 92.6289 10.9268 93.0124 10.7938C93.3959 10.6607 93.7128 10.4298 93.9632 10.1011C94.2137 9.77245 94.3976 9.32636 94.515 8.76288C94.6324 8.1994 94.6911 7.49506 94.6911 6.64984C94.6911 5.80462 94.6324 5.10027 94.515 4.5368ZM82.5998 13.2238H77.9041L76.8476 17.4498H74.7346L78.7259 1.01506H81.778L85.7693 17.4498H83.6563L82.5998 13.2238ZM80.2989 3.36288H80.205L78.2563 11.5803H82.2476L80.2989 3.36288ZM70.1563 5.24114H70.0389L66.6345 15.3368H64.5215L61.1172 5.24114H60.9998L60.2954 17.4498H58.1824L59.1215 1.01506H61.7041L65.5311 12.2846H65.625L69.4519 1.01506H72.0345L72.9737 17.4498H70.8606L70.1563 5.24114ZM54.3789 15.9238C53.9406 16.5655 53.4124 17.0194 52.7941 17.2855C52.1759 17.5516 51.4676 17.6846 50.6693 17.6846C49.8711 17.6846 49.1628 17.5516 48.5445 17.2855C47.9263 17.0194 47.398 16.5655 46.9598 15.9238C46.5215 15.282 46.1889 14.4172 45.9619 13.3294C45.735 12.2416 45.6215 10.8759 45.6215 9.23245C45.6215 7.58897 45.735 6.22332 45.9619 5.13549C46.1889 4.04766 46.5215 3.18288 46.9598 2.54114C47.398 1.8994 47.9263 1.44549 48.5445 1.1794C49.1628 0.913317 49.8711 0.780273 50.6693 0.780273C51.4676 0.780273 52.1759 0.913317 52.7941 1.1794C53.4124 1.44549 53.9406 1.8994 54.3789 2.54114C54.8172 3.18288 55.1498 4.04766 55.3767 5.13549C55.6037 6.22332 55.7172 7.58897 55.7172 9.23245C55.7172 10.8759 55.6037 12.2416 55.3767 13.3294C55.1498 14.4172 54.8172 15.282 54.3789 15.9238ZM53.3576 5.75766C53.1932 4.84984 52.978 4.12984 52.7119 3.59766C52.4459 3.06549 52.1328 2.69766 51.7728 2.49419C51.4128 2.29071 51.045 2.18897 50.6693 2.18897C50.2937 2.18897 49.9258 2.29071 49.5658 2.49419C49.2059 2.69766 48.8928 3.06549 48.6267 3.59766C48.3606 4.12984 48.1454 4.84984 47.9811 5.75766C47.8167 6.66549 47.7345 7.82375 47.7345 9.23245C47.7345 10.6411 47.8167 11.7994 47.9811 12.7072C48.1454 13.6151 48.3606 14.3351 48.6267 14.8672C48.8928 15.3994 49.2059 15.7672 49.5658 15.9707C49.9258 16.1742 50.2937 16.2759 50.6693 16.2759C51.045 16.2759 51.4128 16.1742 51.7728 15.9707C52.1328 15.7672 52.4459 15.3994 52.7119 14.8672C52.978 14.3351 53.1932 13.6151 53.3576 12.7072C53.5219 11.7994 53.6041 10.6411 53.6041 9.23245C53.6041 7.82375 53.5219 6.66549 53.3576 5.75766ZM40.6911 9.9368H35.7606V17.4498H33.6476V1.01506H35.7606V8.29332H40.6911V1.01506H42.8041V17.4498H40.6911V9.9368ZM29.5397 17.4498L26.6049 10.4064L23.6701 17.4498H21.5571L25.0788 8.99766L21.9092 1.01506H24.0223L26.6049 7.58897L29.1875 1.01506H31.3005L28.131 8.99766L31.6527 17.4498H29.5397ZM12.2832 1.01506H20.2658V2.65853H14.3962V8.05853H19.5614V9.70201H14.3962V15.8064H20.2658V17.4498H12.2832V1.01506ZM6.64837 17.4498H4.53533V2.65853H0.778809V1.01506H10.4049V2.65853H6.64837V17.4498Z"
+              fill="white" />
+          </svg>
         </a>
         <form method="get" action="https://echo.htmlacademy.ru">
           <input class="search-box" type="text" placeholder="Поиск">
         </form>
-        <a class="bookmarks-link" href="#">Закладки</a>
-        <a class="basket-link" href="#">Корзина</a>
+        <div class="bookmarks-basket">
+          <a class="bookmarks-link" href="#">Закладки</a>
+          <a class="basket-link" href="#">Корзина</a>
+        </div>
         <button class="button-order" type="button">Оформить заказ</button>
       </div>
     </div>
-    <div class="bottom-header">
-      <div class="container-header">
-        <p class="header-description">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
+    <div class="container-header">
+      <div class="header-middle-part">
+        <div class="header-description-wrapper">
+          <p class="header-description">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта
+          </p>
+        </div>
         <div class="header-contacts">
-          <a class="header-phone" href="tel:+78125550555">+7 (812) 666-02-66</a>
+          <div class="header-phone-wrapper">
+            <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </div>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-navigation">
-          <a class="credentials-link" href="#">Войти</a>
-          <a class="credentials-link" href="#">Регистрация</a>
+          <div class="user-navigation-login">
+            <a href="#">Войти</a>
+          </div>
+          <div class="user-navigation-registration">
+            <a href="#">Регистрация</a>
+          </div>
         </div>
       </div>
       <div class="main-navigation-wrapper">
-        <nav class="main-navigation">
-          <ul class="site-navigation">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Компания</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
+        <ul class="site-navigation">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
       </div>
     </div>
   </header>
   <main>
     <div class="container">
-      <ul class="breadcrumbs">
-        <li>
-          <a href="index.html">Гл</a>
-        </li>
-        <li>
-          <a href="catalog.html">Каталог</a>
-        </li>
-        <li>
-          <a href="#">Инструмент</a>
-        </li>
-        <li class="current-page">Перфораторы</li>
-      </ul>
-      <h1 class="header-goods">Перфораторы</h1>
+      <div class="breadcrumbs-wrapper">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="index.html">
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" fill="#C1C6CE" />
+                <path
+                  d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z"
+                  fill="#C1C6CE" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+          </li>
+          <li>
+            <a href="#">Инструмент</a>
+          </li>
+          <li class="breadcrumbs-current">Перфораторы</li>
+        </ul>
+      </div>
+      <div class="header-goods-wrapper">
+        <h1 class="header-goods">Перфораторы</h1>
+      </div>
       <div class="wrapper">
-        <aside class="filter">
-          <h3 class="filter-header">Фильтр:</h3>
-          <form method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
+        <aside class="filters">
+          <h3 class="filters-header">Фильтр:</h3>
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter-item">
               <legend>Цена:</legend>
-              <div class="price-range-input">
-                <input type="range" id="price-range" name="price" min="0" max="30000" step="1">
-              </div>
-              <div class="price-range-wrapper">
-                <div class="price-range">0</div>
-                <p>-</p>
-                <div class="price-range">3000</div>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Производители:</legend>
-              <ul>
-                <li>
-                  <input type="checkbox" name="bosch" id="filter-bosch" checked>
-                  <label for="filter-bosch">Bosch</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="interscol" id="filter-interscol">
-                  <label for="filter-interscol">Интерскол</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="makita" id="filter-makita" checked>
-                  <label for="filter-makita">Makita</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="dewalt" id="filter-dewalt">
-                  <label for="filter-dewalt">Dewalt</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="hitachi" id="filter-hitachi">
-                  <label for="filter-hitachi">Hitachi</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <legend>Питание:</legend>
-              <ul>
-                <li>
-                  <input type="radio" name="power" value="battery" id="filter-battery" checked>
-                  <label for="filter-battery">Аккумуляторные</label>
-                </li>
-                <li>
-                  <input type="radio" name="power" value="network" id="filter-network">
-                  <label for="filter-network">Сетевые</label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="filter-button" type="submit">Показать</button>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <div class="min-price">0</div>
+                  <div class="dash">
+                    <p>&mdash;</p>
+                  </div>
+                  <div class="max-price">30000</div>
+                </div>
+                <fieldset>
+                  <legend>Производители:</legend>
+                  <ul class="filters-producers">
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch"
+                        id="filter-bosch" checked>
+                      <label for="filter-bosch">Bosch</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interscol"
+                        id="filter-interscol">
+                      <label for="filter-interscol">Интерскол</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita"
+                        id="filter-makita" checked>
+                      <label for="filter-makita">Makita</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt"
+                        id="filter-dewalt">
+                      <label for="filter-dewalt">Dewalt</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi"
+                        id="filter-hitachi">
+                      <label for="filter-hitachi">Hitachi</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset>
+                  <legend>Питание:</legend>
+                  <ul class="filters-accomodation">
+                    <li class="filter-option filter-radio">
+                      <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power"
+                        value="battery" id="filter-battery" checked>
+                      <label for="filter-battery">Аккумуляторные</label>
+                    </li>
+                    <li class="filter-option filter-radio">
+                      <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power"
+                        value="network" id="filter-network">
+                      <label for="filter-network">Сетевые</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="filter-button" type="submit">Показать</button>
           </form>
         </aside>
-        <section class="sort-section">
-          <div class="sort">
-            <h3 class="sort-header">Сортировка</h3>
+        <section class="catalog">
+          <div class="sort-wrapper">
+            <h3 class="sort-header">Сортировка:</h3>
             <ul class="sort-type">
               <li><a href="#">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По функционалу</a></li>
-              <li><a href="#">вверх</a></li>
-              <li><a href="#">вниз</a></li>
+              <li><a href="#" class="up">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
+                  </svg>
+                </a></li>
+              <li><a href="#" class="down"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5" />
+                  </svg></a></li>
             </ul>
           </div>
-          <ul class="chosen-goods">
-            <li class="feature-goods-item">
+          <ul class="catalog-list">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 6000</h5>
               </a>
               <p class="price-before">30500 Р.</p>
               <div class="price-after">25500 Р.</div>
             </li>
-            <li class="feature-goods-item">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 6000</h5>
               </a>
               <p class="price-before">30500 Р.</p>
               <div class="price-after">25500 Р.</div>
             </li>
-            <li class="feature-goods-item">
-              <button class="buy-button" type="button">Купить</button>
-              <button class="bookmarks-button" type="button">В закладки</button>
+            <li class="catalog-item">
+
+              <!-- это будет появляться по хуверу -->
+              <div class="visually-hidden">
+                <button class="buy-button" type="button">Купить</button>
+                <button class="bookmarks-button" type="button">В закладки</button>
+              </div>
               <a href="#">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 6000</h5>
               </a>
               <p class="price-before">30500 Р.</p>
               <div class="price-after">25500 Р.</div>
             </li>
-            <li class="feature-goods-item">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_3000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 3000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_3000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 3000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 3000</h5>
               </a>
               <p class="price-before">32500 Р.</p>
               <div class="price-after">15500 Р.</div>
             </li>
-            <li class="feature-goods-item">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 6000</h5>
               </a>
               <p class="price-before">30500 Р.</p>
               <div class="price-after">25500 Р.</div>
             </li>
-            <li class="feature-goods-item">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_2000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 2000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_2000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 2000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 2000</h5>
               </a>
               <p class="price-before">22500 Р.</p>
               <div class="price-after">12500 Р.</div>
             </li>
-            <li class="feature-goods-item">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_3000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 3000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_3000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 3000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 3000</h5>
               </a>
               <p class="price-before">32500 Р.</p>
               <div class="price-after">15500 Р.</div>
             </li>
-            <li class="feature-goods-item">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_6000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 6000</h5>
               </a>
               <p class="price-before">30500 Р.</p>
               <div class="price-after">25500 Р.</div>
             </li>
-            <li class="feature-goods-item">
+            <li class="catalog-item">
               <a href="#">
-                <img src="img/BOSCH_BFG_2000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 2000">
+                <p class="catalog-item-image">
+                  <img src="img/BOSCH_BFG_2000.jpg" width="100" height="50" alt="Перфоратор BOSCH BFG 2000">
+                </p>
                 <h5>Перфоратор <br> BOSCH BFG 2000</h5>
               </a>
               <p class="price-before">22500 Р.</p>
@@ -214,24 +281,16 @@
             </li>
           </ul>
           <ul class="pagination">
-            <li>
-              <a>1</a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">следующая</a>
-            </li>
+            <li class="pagination-item"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">следующая</a></li>
           </ul>
         </section>
       </div>
     </div>
     <section class="about-products">
-      <div class="container">
+      <div class="about-products-wrapper">
         <h2>Пара слов о перфораторах</h2>
         <p class="about-products-description">Перфоратор — универсальный строительный инструмент.
           Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
@@ -246,45 +305,72 @@
     <div class="container">
       <div class="top-footer">
         <div class="technomart">
-          <a class="main-footer-logo" href="#">Техномарт</a>
+          <a class="main-footer-logo" href="index.html">
+            <svg width="108" height="18" viewBox="0 0 108 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M103.848 2.65853V17.4498H101.735V2.65853H97.978V1.01506H107.604V2.65853H103.848ZM95.7124 11.3572C95.3446 11.819 94.8828 12.1477 94.3272 12.3433C93.7715 12.539 93.1102 12.6368 92.3432 12.6368C91.9832 12.6368 91.5763 12.6133 91.1224 12.5664C90.6685 12.5194 90.2928 12.4646 89.9954 12.402V17.4498H87.8824V1.24984C88.4772 1.07766 89.0759 0.95636 89.6785 0.885926C90.2811 0.815491 90.9346 0.780273 91.6389 0.780273C92.578 0.780273 93.3763 0.8781 94.0337 1.07375C94.6911 1.2694 95.2232 1.59419 95.6302 2.0481C96.0372 2.50201 96.3345 3.10462 96.5224 3.85593C96.7102 4.60723 96.8041 5.53853 96.8041 6.64984C96.8041 7.79245 96.7141 8.74723 96.5341 9.51419C96.3541 10.2811 96.0802 10.8955 95.7124 11.3572ZM94.515 4.5368C94.3976 3.97332 94.2137 3.52723 93.9632 3.19853C93.7128 2.86984 93.3959 2.63897 93.0124 2.50593C92.6289 2.37288 92.1711 2.30636 91.6389 2.30636H89.9954V10.9933H91.6389C92.1711 10.9933 92.6289 10.9268 93.0124 10.7938C93.3959 10.6607 93.7128 10.4298 93.9632 10.1011C94.2137 9.77245 94.3976 9.32636 94.515 8.76288C94.6324 8.1994 94.6911 7.49506 94.6911 6.64984C94.6911 5.80462 94.6324 5.10027 94.515 4.5368ZM82.5998 13.2238H77.9041L76.8476 17.4498H74.7346L78.7259 1.01506H81.778L85.7693 17.4498H83.6563L82.5998 13.2238ZM80.2989 3.36288H80.205L78.2563 11.5803H82.2476L80.2989 3.36288ZM70.1563 5.24114H70.0389L66.6345 15.3368H64.5215L61.1172 5.24114H60.9998L60.2954 17.4498H58.1824L59.1215 1.01506H61.7041L65.5311 12.2846H65.625L69.4519 1.01506H72.0345L72.9737 17.4498H70.8606L70.1563 5.24114ZM54.3789 15.9238C53.9406 16.5655 53.4124 17.0194 52.7941 17.2855C52.1759 17.5516 51.4676 17.6846 50.6693 17.6846C49.8711 17.6846 49.1628 17.5516 48.5445 17.2855C47.9263 17.0194 47.398 16.5655 46.9598 15.9238C46.5215 15.282 46.1889 14.4172 45.9619 13.3294C45.735 12.2416 45.6215 10.8759 45.6215 9.23245C45.6215 7.58897 45.735 6.22332 45.9619 5.13549C46.1889 4.04766 46.5215 3.18288 46.9598 2.54114C47.398 1.8994 47.9263 1.44549 48.5445 1.1794C49.1628 0.913317 49.8711 0.780273 50.6693 0.780273C51.4676 0.780273 52.1759 0.913317 52.7941 1.1794C53.4124 1.44549 53.9406 1.8994 54.3789 2.54114C54.8172 3.18288 55.1498 4.04766 55.3767 5.13549C55.6037 6.22332 55.7172 7.58897 55.7172 9.23245C55.7172 10.8759 55.6037 12.2416 55.3767 13.3294C55.1498 14.4172 54.8172 15.282 54.3789 15.9238ZM53.3576 5.75766C53.1932 4.84984 52.978 4.12984 52.7119 3.59766C52.4459 3.06549 52.1328 2.69766 51.7728 2.49419C51.4128 2.29071 51.045 2.18897 50.6693 2.18897C50.2937 2.18897 49.9258 2.29071 49.5658 2.49419C49.2059 2.69766 48.8928 3.06549 48.6267 3.59766C48.3606 4.12984 48.1454 4.84984 47.9811 5.75766C47.8167 6.66549 47.7345 7.82375 47.7345 9.23245C47.7345 10.6411 47.8167 11.7994 47.9811 12.7072C48.1454 13.6151 48.3606 14.3351 48.6267 14.8672C48.8928 15.3994 49.2059 15.7672 49.5658 15.9707C49.9258 16.1742 50.2937 16.2759 50.6693 16.2759C51.045 16.2759 51.4128 16.1742 51.7728 15.9707C52.1328 15.7672 52.4459 15.3994 52.7119 14.8672C52.978 14.3351 53.1932 13.6151 53.3576 12.7072C53.5219 11.7994 53.6041 10.6411 53.6041 9.23245C53.6041 7.82375 53.5219 6.66549 53.3576 5.75766ZM40.6911 9.9368H35.7606V17.4498H33.6476V1.01506H35.7606V8.29332H40.6911V1.01506H42.8041V17.4498H40.6911V9.9368ZM29.5397 17.4498L26.6049 10.4064L23.6701 17.4498H21.5571L25.0788 8.99766L21.9092 1.01506H24.0223L26.6049 7.58897L29.1875 1.01506H31.3005L28.131 8.99766L31.6527 17.4498H29.5397ZM12.2832 1.01506H20.2658V2.65853H14.3962V8.05853H19.5614V9.70201H14.3962V15.8064H20.2658V17.4498H12.2832V1.01506ZM6.64837 17.4498H4.53533V2.65853H0.778809V1.01506H10.4049V2.65853H6.64837V17.4498Z"
+                fill="white" />
+            </svg>
+          </a>
           <p class="main-footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
             <a class="main-footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           </p>
         </div>
-        <div class="links-items">
-          <ul class="main-footer-links">
-            <li class="main-footer-link"><a href="index.html">Компания</a></li>
-            <li class="main-footer-link"><a href="#">Новости</a></li>
-            <li class="main-footer-link"><a href="catalog.html">Каталог</a></li>
-            <li class="main-footer-link"><a href="#">Доставка</a></li>
-            <li class="main-footer-link"><a href="#">Контакты</a></li>
+        <div class="menu-items">
+          <ul class="top-footer-menu">
+            <li class="top-footer-menu-item"><a href="index.html">Компания</a></li>
+            <li class="top-footer-menu-item"><a href="#">Новости</a></li>
+            <li class="top-footer-menu-item"><a href="catalog.html">Каталог</a></li>
+            <li class="top-footer-menu-item"><a href="#">Доставка</a></li>
+            <li class="top-footer-menu-item"><a href="#">Контакты</a></li>
           </ul>
-          <ul class="main-footer-items">
-            <li class="main-footer-item"><a href="#">Материалы</a></li>
-            <li class="main-footer-item"><a href="#">Техника</a></li>
-            <li class="main-footer-item"><a href="#">Инструмент</a></li>
-            <li class="main-footer-item"><a href="#">Спецпредложения</a></li>
+          <ul class="top-footer-items">
+            <li class="top-footer-item"><a href="#">Материалы</a></li>
+            <li class="top-footer-item"><a href="#">Техника</a></li>
+            <li class="top-footer-item"><a href="#">Инструмент</a></li>
+            <li class="top-footer-item"><a href="#">Спецпредложения</a></li>
           </ul>
         </div>
       </div>
+    </div>
+    <div class="container-footer">
       <div class="bottom-footer">
         <p class="footer-copyright">&copy;2010–2019 Компания «Техномарт» <br> Все права защищены</p>
         <ul class="footer-social">
           <li>
-            <a class="footer-social-vk" href="#">Вконтакте</a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+              <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.5403 11.7281C16.4609 11.4384 17.6395 13.6406 18.8943 14.4834C19.836 15.1219 20.5573 14.9841 20.5573 14.9841L23.9017 14.9372C23.9017 14.9372 25.6495 14.8322 24.8232 13.4803C24.7549 13.3678 24.3389 12.4781 22.334 10.6472C20.2376 8.73186 20.5217 9.04218 23.0456 5.73093C24.5835 3.71249 25.1988 2.47968 25.0062 1.95468C24.8213 1.44936 23.6918 1.58061 23.6918 1.58061L19.9237 1.60593C19.5568 1.60686 19.2458 1.71749 19.1042 2.08874C19.1013 2.09249 18.5062 3.65061 17.7127 4.9753C16.0362 7.77749 15.3669 7.92655 15.0896 7.75124C14.4531 7.3453 14.6139 6.1228 14.6139 5.25374C14.6139 2.5378 15.0299 1.4053 13.7992 1.1128C13.388 1.0153 13.0876 0.951552 12.0389 0.942177C10.6985 0.922489 9.56027 0.942177 8.91508 1.25061C8.48656 1.45968 8.15819 1.91811 8.35753 1.94436C8.6079 1.97718 9.1693 2.09436 9.46975 2.49374C9.8559 3.01124 9.84434 4.17093 9.84434 4.17093C9.84434 4.17093 10.0649 7.36874 9.32434 7.7653C8.8159 8.03718 8.12064 7.48218 6.62516 4.9378C5.86153 3.63655 5.28471 2.19843 5.28471 2.19843C5.28471 2.19843 5.17301 1.93124 4.97079 1.78499C4.73005 1.61155 4.39301 1.55624 4.39301 1.55624L0.816563 1.57874C0.816563 1.57874 0.27923 1.59374 0.0818227 1.82436C-0.0934366 2.02874 0.0673782 2.45061 0.0673782 2.45061C0.0673782 2.45061 2.86864 8.90155 6.04064 12.1509C8.94879 15.1341 12.2537 14.9362 12.2537 14.9362H13.7511C13.7511 14.9362 14.2027 14.8856 14.4338 14.6437C14.6495 14.4187 14.6399 13.9959 14.6399 13.9959C14.6399 13.9959 14.61 12.0187 15.5403 11.7281Z"
+                  fill="white" />
+              </svg>
+            </a>
           </li>
           <li>
-            <a class="footer-social-fb" href="#">Фейсбук</a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+              <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+              </svg>
+            </a>
           </li>
           <li>
-            <a class="footer-social-inst" href="#">Инстаграм</a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
+                  fill="white" />
+              </svg>
+            </a>
           </li>
         </ul>
-        <p class="footer-copyright">
+        <p class="feedback">
           Обратная связь: <br>
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-        <p class="footer-copyright">
+        <p class="authority">
           Разработано - <br>
           <a href="https://htmlacademy.ru">HTML Academy</a>
         </p>
