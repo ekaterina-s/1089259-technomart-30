@@ -6,30 +6,6 @@ const nameUser = modalFeedback.querySelector(`.name-user`);
 const emailUser = modalFeedback.querySelector(`.email-user`);
 const textboxUser = modalFeedback.querySelector(`.textbox-user`);
 
-const mapLink = document.querySelector(`.map`);
-const mapPopup = document.querySelector(`.modal-map`);
-console.log(mapPopup);
-const mapClose = mapPopup.querySelector(`.modal-close`);
-
-mapLink.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  mapPopup.classList.add("modal-show");
-});
-
-mapClose.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  mapPopup.classList.remove("modal-show");
-});
-
-window.addEventListener("keydown", (evt) => {
-  if (evt.key === `Escape`) {
-    if (mapPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      mapPopup.classList.remove("modal-show");
-    }
-  }
-});
-
 let isStorageSupport = true;
 let storage = ``;
 
@@ -76,4 +52,4 @@ feedbackForm.addEventListener(`submit`, (evt) => {
     modalFeedback.offsetWidth = modalFeedback.offsetWidth;
     modalFeedback.classList.add(`modal-error`);
   }
-})
+});

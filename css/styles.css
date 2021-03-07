@@ -50,6 +50,11 @@
     --feature-description-active: rgba(169,169,169, 30%);
 
     --modal-in-basket-wrapper: #F1F1F1;
+
+    --slider-top: rgba(0, 0, 0, 0.25);
+
+    --main-font: "Cuprum", "Arial", sans-serif;
+    --alternative-font: "PT Sans", sans-serif;
   }
 
   /* Global */
@@ -58,10 +63,7 @@
     min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: normal;
+    font: normal 13px/24px var(--main-font);
     color: var(--basic-dark);
     background-color: var(--basic-white);
   }
@@ -94,10 +96,7 @@
 
   .main-header {
     padding-bottom: 60px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    font: normal 18px/24px var(--main-font);
     color: var(--basic-white);
     background-color: var(--blue-background);
 
@@ -110,29 +109,35 @@
   .top-header-container {
     width: 940px;
     margin: 0 auto;
-    /* padding: 0 10px; */
     display: flex;
     justify-content: space-between;
   }
 
-  .main-header-logo svg {
+  .main-header-logo {
+    background-image: url("../img/logo-header.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 220px;
+    height: 47px;
     display: block;
     margin-bottom: -5px;
-    margin-right: -6px;
   }
 
-  .main-header-logo svg:active rect {
-    fill: var(--red-button-click);
+  .main-header-logo:active {
+    background-image: url("../img/logo-header-clicked.svg");
   }
 
   .form-search {
     position: relative;
   }
 
-  .form-search::after {
-    content: "";
+  .search-icon {
     position: absolute;
-    top: 12px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    transform: translateY(-50%);
+    top: 50%;
     left: 17px;
     width: 17px;
     height: 17px;
@@ -142,32 +147,27 @@
     opacity: 0.3;
   }
 
-  /* .form-search::after:hover {
+  .search-box:hover ~ .search-icon {
+    background-image: url("../img/icon-search-hover.svg");
+  }
 
-  } */
-
-  /* .form-search::after:focus {
-
-  } */
+  .search-box:focus ~ .search-icon {
+    background-image: url("../img/icon-search-fill.svg");
+  }
 
   .search-box {
-    width: 230px;
-    height: 41px;
+    width: 224px;
+    height: 42px;
     margin: 0;
     padding-left: 42px;
-    /* margin-right: 20px; */
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    font: normal 18px/24px var(--main-font);
     color: var(--basic-white);
     background-color: var(--basic-extra-dark);
     border: none;
   }
 
   .search-box::placeholder {
-    color: inherit;
-    background-color: inherit;
+    font: normal 18px/24px var(--main-font);
   }
 
   .search-box:focus {
@@ -181,20 +181,9 @@
     background-color: var(--links-header-interactive);
   }
 
-  .user-interaction-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 26px;
-  }
-
   .bookmarks-link {
-    margin-right: 50px;
-    padding: 9px 9px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    padding: 9px 24px 9px 23px;
+    font: normal 18px/24px var(--main-font);
     color: var(--basic-white);
     position: relative;
     display: flex;
@@ -216,11 +205,8 @@
   }
 
   .basket-link {
-    padding: 9px 9px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    padding: 9px 26px;
+    font: normal 18px/24px var(--main-font);
     color: var(--basic-white);
     position: relative;
     display: flex;
@@ -253,12 +239,13 @@
     opacity: 0.3;
   }
 
+  .added {
+    background-color: red;
+  }
+
   .button-order {
     padding: 9px 18px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    font: normal 18px/24px var(--main-font);
     color: var(--basic-white);
     background-color: var(--button-green);
     border: none;
@@ -277,7 +264,7 @@
   .container {
     width: 940px;
     margin: 0 auto;
-    padding: 0 10px;
+    /* padding: 0 10px; */
   }
 
   .header-middle-part {
@@ -285,19 +272,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 46px;
+    padding-top: 43px;
     padding-bottom: 40px;
   }
 
   .header-description {
     margin: 0;
-    padding: 0;
-    padding-left: 30px;
-    margin-right: 93px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 23px;
-    font-weight: normal;
+    padding: 0 87px 0 30px;
+    font: normal 16px/23px var(--main-font);
     font-style: italic;
     color: var(--special);
   }
@@ -311,12 +293,10 @@
   }
 
   .header-phone {
-    padding: 7px 45px 8px 74px;
+    padding: 7px 42px 7px 74px;
+    box-sizing: border-box;
     border: 3px solid var(--basic-white);
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 21px;
-    line-height: 30px;
-    font-weight: bold;
+    font: bold 21px/30px var(--main-font);
     color: var(--special);
     position: relative;
     display: flex;
@@ -339,10 +319,7 @@
   .header-address {
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: normal;
+    font: normal 14px/24px var(--main-font);
     color: var(--basic-dark);
     text-align: center;
   }
@@ -356,10 +333,7 @@
     margin-right: 10px;
     padding: 12px 27px 12px 45px;
     background-color: var(--basic-white);
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 21px;
-    line-height: 21px;
-    font-weight: normal;
+    font: normal 21px/21px var(--main-font);
     color: var(--basic-black);
     text-align: center;
     position: relative;
@@ -391,10 +365,7 @@
   .user-navigation-registration {
     padding: 12px 24px;
     background-color: var(--basic-white);
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 21px;
-    line-height: 21px;
-    font-weight: normal;
+    font: normal 21px/21px var(--main-font);
     color: var(--basic-black);
   }
 
@@ -408,11 +379,8 @@
 
   .user-navigation-autorised {
     padding: 12px 56px;
+    font: normal 21px/21px var(--main-font);
     background-color: var(--basic-white);
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 21px;
-    line-height: 21px;
-    font-weight: normal;
     color: var(--basic-black);
     text-align: center;
     position: relative;
@@ -456,17 +424,13 @@
 
   .personal-settings {
     margin-top: -20px;
-    margin-left: 680px;
+    margin-left: 684px;
     display: flex;
     justify-content: space-between;
   }
 
   .personal-settings a {
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
+    font: normal 16px/18px var(--main-font);
     color: var(--basic-dark);
   }
 
@@ -498,30 +462,57 @@
 
     /* Main navigation */
 
+  /* .site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: 0 53px 0 53px;
+    background-color: var(--basic-dark);
+    border-bottom: 5px solid var(--basic-extra-dark);
+  } */
+
+  .site-navigation-wrapper {
+    /* padding: 16px 53px 20px 53px; */
+    background: #00ca74;
+  }
   .site-navigation {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
     margin: 0;
-    padding: 0;
-    /* padding: 16px 53px 20px 53px; */
+    padding: 16px 53px 20px 53px;
     background-color: var(--basic-dark);
-    text-align: center;
+
   }
 
-  .site-navigation li {
+  /* .site-navigation li {
     flex-grow: 1;
-  }
+  } */
+
+  /* .site-navigation a {
+    display: block;
+    padding: 15px;
+    font: normal 18px/24px var(--main-font);
+    color: var(--basic-white);
+  } */
 
   .site-navigation a {
-    display: block;
-    padding: 20px;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
     color: var(--basic-white);
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+
+  .site-navigation a:last-child {
+    padding-right: 0;
   }
 
   .site-navigation a:hover {
@@ -543,7 +534,6 @@
 
   .features {
     padding-bottom: 60px;
-    /* или здесь лучше margin? */
   }
 
   .features .container {
@@ -551,9 +541,6 @@
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 123px 123px 123px;
     gap: 20px;
-    /* margin: 0;
-    padding: 0;
-    list-style: none; */
   }
 
   .feature-item {
@@ -564,10 +551,7 @@
   .feature-item h3 {
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: bold;
+    font: bold 24px/30px var(--main-font);
     color: var(--basic-white);
     /* text-align: justify; */
   }
@@ -577,33 +561,27 @@
     position: relative;
   }
 
-  .first .feature-description::after {
+   .feature-item::after {
     content: "";
     position: absolute;
-    bottom: 27px;
-    right: 53px;
+    top: 27px;
+    right: 27px;
+  }
+
+  .first:after {
     width: 44px;
     height: 65px;
-    background-image: url("../img/icon-1.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background: url("../img/icon-1.svg") no-repeat center center;
   }
 
   .second {
     background-color: var(--feature-tools);
-    position: relative;
   }
 
-  .second .feature-description::after {
-    content: "";
-    position: absolute;
-    bottom: 28px;
-    right: 38px;
+  .second:after {
     width: 75px;
     height: 61px;
-    background-image: url("../img/icon-2.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background: url("../img/icon-2.svg") no-repeat center center;
   }
 
   .third {
@@ -611,95 +589,103 @@
     position: relative;
   }
 
-  .third .feature-description::after {
-    content: "";
-    position: absolute;
-    bottom: 30px;
-    right: 31px;
+  .third:after {
     width: 78px;
     height: 62px;
-    background-image: url("../img/icon-3.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background: url("../img/icon-3.svg") no-repeat center center;
   }
 
-  .fourth {
-    /* background-image: url("../img/perforators.png");
-    background-position: top center;;
-    background-repeat: no-repeat; */
+  .slider {
     grid-column: 1 / 3;
     grid-row: 2 / 4;
+    position: relative;
+    width: 620px;
+    overflow: hidden;
   }
 
-  .fourth-description {
-    margin-top: 5px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--basic-white);
-  }
-
-  .fourth-1 {
-    background-image: url("../img/perforators.png");
-    background-position: top center;;
-    background-repeat: no-repeat;
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-  }
-
-  .fourth-2 {
-    background-image: url("../img/drills.png");
-    background-position: top center;;
-    background-repeat: no-repeat;
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-  }
-
-  .slider-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .slide-wrap {
+    display: flex;
   }
 
   .slide {
-    display: none;
+    flex-shrink: 0;
+    position: relative;
   }
 
-  .slide-current {
+  .slider-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--basic-white);
+    background-color: var(--slider-top);
+    padding: 23px 0 17px 24px;
+  }
+
+  .slider-title {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font: 700 36px/36px 'Cuprum', sans-serif;
+  }
+
+  .slider-description {
+    margin: 0;
+    font: 18px/24px 'Cuprum', sans-serif;
+  }
+
+  .slider-img {
     display: block;
   }
 
-  .slide-title {
-    margin: 0;
-    padding: 0;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: justify;
-    color: var(--basic-white);
+  .slider-button {
+    width: 22px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    cursor: pointer;
+    border: 0;
   }
 
-  .slide-control-left {
-    position: absolute;
-    top: 122px;
+  .slider-button-left {
     left: 25px;
+    background: url(../img/arrow-left.svg) no-repeat center center;
+  }
 
-    background-color: transparent;
-    border: none;
+  .slider-button-right {
+    right: 20px;
+    background: url(../img/arrow-right.svg) no-repeat center center;
+  }
+
+  .slider-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 36px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider-pagination-dot {
+    padding: 0;
+    margin-right: 10px;
+    display: block;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-white);
     cursor: pointer;
   }
 
-  .slide-control-right {
-    position: absolute;
-    top: 122px;
-    right: 20px;
+  .slider-pagination-dot:last-child {
+    margin-right: 0;
+  }
 
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  .slider-pagination-dot.active {
+    background-color: var(--special);
   }
 
   .open-catalog {
@@ -707,11 +693,8 @@
     bottom: 27px;
     left: 24px;
     padding: 11px 46px 9px 46px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font: 14px/18px var(--main-font);
     text-align: center;
-    font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--special);
@@ -730,16 +713,10 @@
     position: relative;
   }
 
-  .fifth .feature-description::after {
-    content: "";
-    position: absolute;
-    bottom: 25px;
-    right: 45px;
+  .fifth:after {
     width: 59px;
     height: 72px;
-    background-image: url("../img/icon-4.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background: url("../img/icon-4.svg") no-repeat center center;
   }
 
   .sixth {
@@ -747,36 +724,24 @@
     position: relative;
   }
 
-  .sixth .feature-description::after {
-    content: "";
-    position: absolute;
-    bottom: 28px;
-    right: 31px;
+  .sixth:after {
     width: 78px;
     height: 63px;
-    background-image: url("../img/icon-5.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background: url("../img/icon-5.svg") no-repeat center center;
   }
 
   .feature-description {
-    padding: 10px 24px;
-    /* bottom: 22px;
-    left: 22px; */
+    padding: 10px 12px;
+    box-sizing: border-box;
     margin-top: 14px;
-    /* min-width: 5px; */
-    /* по макету 135, но некрасиво */
+    width: 135px;
     display: block;
+    font: 14px/18px var(--main-font);
     font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: normal;
-    color: var(--basic-white);
     text-align: center;
     text-transform: uppercase;
+    color: var(--basic-white);
     background-color: var(--feature-description);
-    /* как быть с паддингами по горизонтали? там они везде разные, может здесь лучше задать ширину и auto паддинги? */
-    /* display: inline-block; */
   }
 
   .popular-items, .popular-producers {
@@ -807,24 +772,18 @@
   .popular-items h2, .popular-producers h2 {
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: normal;
+    font: 30px/30px var(--main-font);
     color: var(--basic-dark);
     text-transform: uppercase;
   }
 
-  .all-popular-items, .all-producers {
-    padding: 11px 38px 9px 38px;
+  .all-popular-items {
+    padding: 10px 24px 10px 24px;
     position: absolute;
-    top: 24px;
-    right: 19px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    top: 26px;
+    right: 14px;
+    font: 14px/18px var(--main-font);
     text-align: center;
-    font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--special);
@@ -834,10 +793,21 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
     display: grid;
     grid-template-columns: 220px 220px 220px 220px;
     gap: 20px;
+  }
+
+  .all-producers {
+    padding: 12px 38px 9px 38px;
+    position: absolute;
+    top: 20px;
+    right: 19px;
+    font: 14px/18px var(--main-font);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--special);
   }
 
   .popular-producers-list {
@@ -853,6 +823,7 @@
     border: 1px solid var(--border-items);
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   .popular-producer div {
@@ -861,7 +832,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 145px;
+    height: 143px;
   }
 
   .popular-producer:hover {
@@ -881,10 +852,7 @@
     padding: 0;
     padding-top: 64px;
     padding-bottom: 25px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: normal;
+    font: 30px/30px var(--main-font);
     color: var(--basic-black);
     text-transform: uppercase;
   }
@@ -899,18 +867,14 @@
 
   .services-wrapper {
     display: grid;
-    grid-column: 240px;
+    grid-column: 1fr;
   }
 
   .services-wrapper button {
-    padding: 13.5px 139px 17.5px 22px;
+    padding: 14px 142px 18px 20px;
     background-color: var(--basic-dark);
     border: none;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 30px;
+    font: bold 21px/30px var(--main-font);
     color: var(--basic-white);
   }
 
@@ -933,11 +897,8 @@
   .services-delivery h2 {
     margin: 0;
     padding: 0;
-    padding-bottom: 30px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: normal;
+    padding-bottom: 29px;
+    font: 30px/30px var(--main-font);
     color: var(--basic-dark);
     text-transform: uppercase;
   }
@@ -945,8 +906,8 @@
   .services-delivery::after {
     content: "";
     position: absolute;
-    top: 15px;
-    left: 300px;
+    top: 19px;
+    left: 230px;
     width: 468px;
     height: 261px;
     background-image: url("../img/truck.svg");
@@ -958,18 +919,12 @@
     margin: 0;
     padding: 0;
     padding-bottom: 70px;
-    font-family: "PT Sans", sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: normal;
+    font: 13px/24px var(--alternative-font);
     color: var(--basic-black);
   }
 
   .services-item a {
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 21px;
-    line-height: 30px;
-    font-weight: bold;
+    font: bold 21px/30px var(--main-font);
     color: var(--basic-dark);
   }
 
@@ -984,10 +939,7 @@
   .delivery-description  {
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: normal;
+    font: 13px/24px var(--alternative-font);
     color: var(--basic-black);
   }
 
@@ -996,31 +948,45 @@
     grid-template-columns: 460px 300px;
     gap: 180px;
     background-color: var(--basic-white);
+    padding-top: 70px;
+  }
+
+  .about-company h2 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 24px;
+    font: 30px/30px var(--main-font);
+    color: var(--basic-black);
+    text-transform: uppercase;
   }
 
   .about-company-description {
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: normal;
+    /* padding-bottom: 10px; */
+    font: 13px/24px var(--alternative-font);
     color: var(--basic-black);
+  }
+
+  .first-part {
+    padding-bottom: 28px;
+  }
+
+  .second-part {
+    padding-bottom: 6px;
   }
 
   .partners-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    padding-bottom: 31px;
+    padding-bottom: 19px;
   }
 
   .partners-list-item {
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
+    padding-left: 5px;
+    padding-bottom: 12px;
+    font: 18px/24px var(--main-font);
     color: var(--basic-black);
   }
 
@@ -1032,11 +998,8 @@
 
   .more-about-company {
     padding: 11px 40px 9px 40px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font: 14px/18px var(--main-font);
     text-align: center;
-    font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--special);
@@ -1045,12 +1008,8 @@
   .contacts h2 {
     margin: 0;
     padding: 0;
-    padding-top: 74px;
-    padding-bottom: 24px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: normal;
+    padding-bottom: 25px;
+    font: 30px/30px var(--main-font);
     color: var(--basic-black);
     text-transform: uppercase;
   }
@@ -1058,11 +1017,8 @@
   .contacts-description {
     margin: 0;
     padding: 0;
-    padding-bottom: 32px;
-    font-family: "PT Sans", sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: normal;
+    padding-bottom: 33px;
+    font: 13px/24px var(--alternative-font);
     color: var(--basic-black);
   }
 
@@ -1072,11 +1028,8 @@
 
   .button-feedback {
     padding: 9px 62px 11px 61px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font: 14px/18px var(--main-font);
     text-align: center;
-    font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--special);
@@ -1095,22 +1048,28 @@
     padding-bottom: 54px;
   }
 
+  .main-footer-logo {
+    background-image: url("../img/logo-footer.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 220px;
+    height: 68px;
+    display: block;
+    /* margin-bottom: -5px; */
+    margin-bottom: 28px;
+  }
+
   .main-footer-address, .main-footer-phone {
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    font: 18px/24px var(--main-font);
     color: var(--main-footer-address);
   }
 
   .top-footer-menu {
     list-style: none;
-    margin: 0;
     padding: 0;
-    margin-top: 37px;
-    margin-bottom: 34px;
+    margin: 39px 0 34px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1125,10 +1084,7 @@
   }
 
   .top-footer-menu-item a {
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    font: 18px/24px var(--main-font);
     color: var(--blue-background);
   }
 
@@ -1143,10 +1099,7 @@
   }
 
   .top-footer-item a {
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    font: 18px/24px var(--main-font);
     color: var(--footer-yellow);
   }
 
@@ -1170,24 +1123,21 @@
     width: 940px;
     margin: 0 auto;
     padding: 0;
-    padding-top: 34px;
-    padding-bottom: 29px;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .footer-copyright {
     margin: 0;
-    margin-right: 161px;
+    margin-right: 165px;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: normal;
+    font: 16px/18px var(--main-font);
     color: var(--basic-white);
   }
 
   .footer-social {
     margin: 0;
-    margin-right: 118px;
+    margin-right: 120px;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -1215,20 +1165,14 @@
     margin: 0;
     margin-right: 51px;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: normal;
+    font: 16px/18px var(--main-font);
     color: var(--basic-white);
   }
 
   .authority {
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: normal;
+    font: 16px/18px var(--main-font);
     color: var(--basic-white);
   }
 
@@ -1254,10 +1198,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    font: 13px/18px var(--alternative-font);
     color: var(--basic-black);
     text-transform: uppercase;
   }
@@ -1292,12 +1233,9 @@
     margin-bottom: 20px;
     padding: 29px 0 30px 29px;
     background-color: var(--blue-background);
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: normal;
-    color: var(--basic-dark);
+    font: 30px/30px var(--main-font);
     text-transform: uppercase;
+    color: var(--basic-dark);
   }
 
   .wrapper {
@@ -1319,11 +1257,9 @@
 
   .filters-header {
     margin-top: 0;
+    margin-bottom: 8px;
     padding: 13px 0 13px 18px;
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    font: 13px/18px var(--alternative-font);
     color: var(--basic-black);
     text-transform: uppercase;
     background-color: var(--filter-sort);
@@ -1331,43 +1267,44 @@
 
   .filter fieldset {
     padding: 0;
-    padding-bottom: 37px;
+    /* padding-bottom: 37px; */
     margin: 0;
+    margin-bottom: 17px;
     border: none;
+    border-bottom: 1px solid var(--borders);
+    /* background-color: #00ca74; */
   }
 
   .filter legend {
-    font-family: "PT Sans", sans-serif;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    font: bold 17px/30px var(--alternative-font);
     color: var(--basic-black);
     text-transform: uppercase;
   }
 
   .filters-producers, .filters-accomodation {
     padding: 0;
+    padding-bottom: 8px;
     margin: 0;
-    margin-top: 15px;
-    margin-left: 5px;
+    margin-top: 20px;
+    margin-left: 0;
     list-style: none;
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 19px;
+    font: 15px/19px var(--alternative-font);
     color: var(--basic-black);
   }
 
   .filter-option {
-    padding-left: 35px;
-    padding-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
   }
 
   .filter-option label {
-    position: relative;
     display: block;
     cursor: pointer;
     user-select: none;
+    padding-left: 5px;
   }
 
   .filter-item {
@@ -1378,16 +1315,7 @@
 
   .range-filter {
     width: 220px;
-    margin-top: 11px;
-  }
-
-  .filter-item legend {
-    font-family: "PT Sans", sans-serif;
-    font-style: normal;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 30px;
+    margin-top: 10px;
   }
 
   .range-controls {
@@ -1414,7 +1342,7 @@
 
   .range-controls .toggle {
     position: absolute;
-    top: 31px;
+    top: 28px;
     left: 0;
     width: 4px;
     height: 4px;
@@ -1440,26 +1368,24 @@
     margin-bottom: 25px;
   }
 
-  .min-price, .max-price {
+  .price-control {
     width: 95px;
     height: 38px;
     padding: 0;
+    padding-left: 20px;
     margin: 0;
+    box-sizing: border-box;
     text-align: center;
     background-color: var(--basic-neutral);
     border: none;
     border-radius: 2px;
-
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
+    font: 17px/18px var(--alternative-font);
     color: var(--basic-black);
-    font-size: 17px;
-    line-height: 18px;
     text-align: center;
     text-transform: uppercase;
   }
 
-  .min-price:focus, .max-price:focus {
+  .price-control {
     outline: none;
   }
 
@@ -1473,47 +1399,41 @@
   .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
-    left: -40px;
-    top: -5px;
-    width: 23px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 27px;
     height: 23px;
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    /* border: 3px solid var(--credentials-link-click);
-    border-radius: 3px; */
   }
 
-  .filter-input-checkbox:checked + label::after {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -40px;
-    width: 23px;
-    height: 23px;
+  .filter-input-checkbox:checked + label::before {
     background-image: url("../img/checkbox-on.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
   }
 
   .filter-input-radio + label::before {
     content: "";
     position: absolute;
-    left: -39px;
-    top: -5px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 25px;
     height: 25px;
     border: 4px solid var(--credentials-link-click);
     border-radius: 50%;
+    box-sizing: border-box;
   }
 
   .filter-input-radio:checked + label::after {
     content: "";
     position: absolute;
-    top: 5px;
-    left: -29px;
-    width: 13px;
-    height: 13px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 9px;
     background-color: var(--credentials-link-click);
     border-radius: 50%;
   }
@@ -1527,40 +1447,30 @@
 
   .catalog {
     padding-bottom: 60px;
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    font: 13px/18px var(--alternative-font);
     color: var(--basic-black);
   }
 
   .sort-wrapper {
     margin-bottom: 28px;
-    padding: 0;
-    padding-top: 13px;
-    padding-bottom: 12px;
-    padding-left: 20px;
+    padding: 13px 0 12px 20px;
     display: flex;
-    font-family: "PT Sans", sans-serif;
-    background-color: var(--filter-sort);
+    font: 13px/18px var(--alternative-font);
     text-transform: uppercase;
+    background-color: var(--filter-sort);
   }
 
   .sort-header {
     margin: 0;
-    padding: 0;
     margin-right: 140px;
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    padding: 0;
+    font: 13px/18px var(--alternative-font);
     color: var(--basic-black);
   }
 
   .sort-type {
     list-style: none;
     padding: 0;
-    /* padding-top: 13px; */
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -1583,10 +1493,7 @@
   }
 
   .sort-type a:not(.up, .down) {
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    font: 13px/18px var(--alternative-font);
     color: var(--price-before);
     border-bottom: 1px dotted var(--special);
   }
@@ -1612,7 +1519,7 @@
   .catalog-list {
     padding: 0;
     margin: 0;
-    padding-bottom: 48px;
+    padding-bottom: 40px;
     list-style: none;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -1626,30 +1533,40 @@
     position: relative;
   }
 
-  .catalog-item:hover {
-    box-shadow: 0px 4px 20px var(--box-shadow);
+  /* это модалка ко хуверу */
+
+  .catalog-detail {
+    position: absolute;
+    padding: 38px 42px 21px 42px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--basic-white);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s easy;
   }
 
-    /* это модалка ко хуверу */
+  .catalog-detail button {
+    position: relative;
+    width: 100%;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font: 14px/18px var(--main-font);
+    text-transform: uppercase;
+    text-align: center;
+  }
 
-   .buy-button {
-     position: absolute;
-     top: 38px;
-     left: 41px;
-     padding: 10px 40px 10px 53px;
-     font-family: "Cuprum", "Arial", sans-serif;
-     font-weight: normal;
-     font-size: 14px;
-     line-height: 18px;
-     text-align: center;
-     text-transform: uppercase;
-     color: var(--basic-white);
-     background-color: var(--button-green);
-     border-bottom: 3px solid var(--buy-button-hoover-card);
-     border-radius: 2px;
-   }
+  .buy {
+    padding: 10px 12px 10px 25px;
+    color: var(--basic-white);
+    background-color: var(--button-green);
+    border: none;
+    border-bottom: 3px solid var(--buy-button-hoover-card);
+  }
 
-   .buy-button::before {
+  .buy::before {
     content: "";
     position: absolute;
     top: 10px;
@@ -1662,41 +1579,40 @@
     opacity: 0.3;
   }
 
-   .buy-button:active {
-     background-color: var(--button-green-click);
-     outline: none;
-   }
+  .buy:hover {
+    background-color: var(--button-green-hover);
+    outline: none;
+  }
 
-   .bookmarks-button {
-     position: absolute;
-     top: 86px;
-     left: 41px;
-     padding: 11px 31px 9px 31px;
-     font-family: "Cuprum", "Arial", sans-serif;
-     font-weight: normal;
-     font-size: 14px;
-     line-height: 18px;
-     text-align: center;
-     text-transform: uppercase;
-     color: var(--basic-dark);
-     background-color: var(--basic-white);
-     border: 3px solid var(--button-green);
-     border-radius: 2px;
-   }
+  .buy:active {
+    background-color: var(--button-green-click);
+    outline: none;
+  }
 
-   .bookmarks-button:hover, .bookmarks-button:active {
-     border: 3px solid var(--basic-dark);
-     border-radius: 2px;
-     outline: none;
-   }
+  .to-bookmarks {
+    padding: 11px 30px 9px 30px;
+    color: var(--basic-dark);
+    background-color: var(--basic-white);
+    border: 3px solid var(--button-green);
+    border-radius: 2px;
+  }
 
-   .item-current {
-    display: none;
+  .to-bookmarks:hover, .to-bookmarks:active {
+    border: 3px solid var(--basic-dark);
+    border-radius: 2px;
+    outline: none;
+  }
+
+  .catalog-item:hover {
+    box-shadow: 0px 4px 20px var(--box-shadow);
+  }
+
+  .catalog-item:hover .catalog-detail {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .catalog-item-image {
-    /* Проверишь, плиз, эти отступы, что то мне не нравится их несоответствие макету */
-    /* и еще, как быть с высотой? картинки разные, без нее все съезжает */
     margin: 0;
     padding: auto;
     height: 178px;
@@ -1707,13 +1623,9 @@
 
   .catalog-item h5 {
     padding: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 7px;
     margin: 0;
-    font-family: "PT Sans", sans-serif;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: bold;
+    font: bold 18px/20px var(--alternative-font);
     color: var(--basic-black);
     text-align: center;
   }
@@ -1722,10 +1634,7 @@
     padding: 0;
     padding-bottom: 14px;
     margin: 0;
-    font-family: "PT Sans", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: bold;
+    font: bold 17px/18px var(--alternative-font);
     color: var(--price-before);
     text-decoration-line: line-through;
     text-transform: uppercase;
@@ -1734,12 +1643,8 @@
 
   .price-after {
     margin-left: 45px;
-    padding: 10px 10px;
-    padding-right: 45px;
-    font-family: "PT Sans", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: bold;
+    padding: 10px 45px 10px 0;
+    font: bold 17px/18px var(--alternative-font);
     color: var(--basic-white);
     text-transform: uppercase;
     text-align: center;
@@ -1747,13 +1652,13 @@
     background-repeat: no-repeat;
   }
 
-  .catalog-item-new::after {
+  .popular-items-list .catalog-item:nth-child(2)::after, .catalog-item:last-child::after {
     content: "";
     position: absolute;
     background-image: url(../img/catalogue_new.svg);
     width: 100px;
     height: 70px;
-    left: 146px;
+    left: 148px;
     top: 0;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1778,15 +1683,19 @@
   .pagination-item a {
     display: block;
     padding: 10px 15px;
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    padding: auto;
+    font: 13px/18px var(--alternative-font);
+    text-transform: uppercase;
     text-align: center;
     color: var(--basic-black);
     background: var(--basic-white);
     border: 1px solid var(--borders);
-    text-transform: uppercase;
+  }
+
+  .pagination .next a {
+    display: block;
+    padding: 10px 32px;
+
   }
 
   .pagination-item a:hover {
@@ -1860,7 +1769,6 @@
   /* feedback */
 
   .modal-feedback {
-    /* display: none; */
     top: 120px;
     bottom: auto;
     width: 620px;
@@ -1873,7 +1781,7 @@
     padding: 46px 80px 37px 80px;
   }
 
-  .modal-feedback-wrapper input {
+  .text-field {
     padding: 0;
     margin: 0;
     border: 2px solid var(--credentials-link-click);
@@ -1897,8 +1805,7 @@
   }
 
   .textbox-user {
-    width: 455px;
-    height: 114px;
+    resize: none;
   }
 
   .textbox-user::placeholder {
@@ -1913,11 +1820,8 @@
 
   .button-send {
     padding: 11px 199px 9px 199px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font: 14px/18px var(--main-font);
     text-align: center;
-    font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--special);
@@ -1925,24 +1829,17 @@
   }
 
   /* map */
-
   .modal-map {
-    /* display: none; */
     height: 449px;
     width: 943px;
     border-top: 5px solid var(--special);
   }
-
-  /* .modal-map img {
-    display: block;
-  } */
 
   .modal-map iframe {
     border: none;
   }
 
   .modal-in-basket {
-    display: none;
     top: 120px;
     bottom: auto;
     width: 620px;
@@ -1954,11 +1851,7 @@
   .good-added {
     padding: 73px 100px 67px 166px;
     position: relative;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+    font: bold 24px/30px var(--main-font);
   }
 
   .good-added::before {
@@ -1983,15 +1876,9 @@
 
   .to-order {
     margin-right: 10px;
-    /* position: absolute;
-    bottom: 27px;
-    left: 24px; */
     padding: 11px 46px 9px 46px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font: 14px/18px var(--main-font);
     text-align: center;
-    font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--special);
@@ -1999,11 +1886,8 @@
 
   .shopping-continue {
     padding: 11px 31px 9px 31px;
-    font-family: "Cuprum", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    font: 14px/18px var(--main-font);
     text-align: center;
-    font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-black);
     background-color: var(--basic-white);
@@ -2050,3 +1934,5 @@
     transform: translateX(10px);
   }
 }
+
+
