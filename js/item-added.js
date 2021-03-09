@@ -15,7 +15,7 @@ modalClose.addEventListener(`click`, (evt) => {
   basket.classList.remove(`added`);
 })
 
-window.addEventListener(`click`, (evt) => {
+document.addEventListener(`keydown`, (evt) => {
   evt.preventDefault();
   if (evt.key === `Escape`) {
     if (inBasketModal.classList.contains(`modal-show`)) {
