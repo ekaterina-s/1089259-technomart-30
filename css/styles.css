@@ -343,6 +343,7 @@
   .user-navigation {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -20px;
   }
 
   .user-navigation-login {
@@ -357,6 +358,10 @@
     align-items: center;
   }
 
+  .user-navigation-login:hover, .user-navigation-registration:hover {
+    color: var(--special);
+  }
+
   .user-navigation-login::before {
     content: "";
     position: absolute;
@@ -367,15 +372,14 @@
     background-image: url("../img/icon-login.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    opacity: 0.5;
   }
 
-  .user-navigation-login:hover:before {
-    opacity: 1;
+  .user-navigation-login:hover::before {
+    background-image: url("../img/icon-login-hover.svg");
   }
 
   .user-navigation-login:active:before {
-    opacity: 0.5;
+    background-image: url("../img/icon-login.svg");
   }
 
   .user-navigation-registration {
@@ -383,10 +387,6 @@
     background-color: var(--basic-white);
     font: normal 21px/21px var(--main-font);
     color: var(--basic-black);
-  }
-
-  .user-navigation-login:hover, .user-navigation-registration:hover {
-    color: var(--special);
   }
 
   .user-navigation-login:active, .user-navigation-registration:active {
@@ -412,28 +412,41 @@
     background-image: url("../img/icon-user.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    opacity: 0.8;
   }
 
+  .user-navigation-autorised:hover::before {
+    background-image: url("../img/icon-user-hover.svg");
+  }
+
+  .user-navigation-autorised:active {
+    color: var(--credentials-link-click);
+  }
+
+  .user-navigation-autorised:active::before {
+    background-image: url("../img/icon-user.svg");
+  }
+
+
   .logging-out {
-    content: "";
-    position: absolute;
-    top: 101px;
-    right: 220px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 15px;
+    left: -35px;
     width: 20px;
     height: 17px;
     background-image: url("../img/icon-logout.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    opacity: 0.8;
   }
 
-  .user-navigation-autorised:hover::before, .logging-out:hover {
-    opacity: 1;
+  .logging-out:hover {
+    background-image: url("../img/icon-logout-hover.svg");
   }
 
-  .user-navigation-autorised:active {
-    color: var(--credentials-link-click);
+  .logging-out:active {
+    background-image: url("../img/icon-logout.svg");
   }
 
   .personal-settings {
