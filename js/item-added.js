@@ -1,12 +1,14 @@
-const toBookmarks = document.querySelector(`.catalog-detail .buy`);
+const buyButtons = document.querySelectorAll(`.catalog-detail .buy`);
 const inBasketModal = document.querySelector(`.modal-in-basket`);
 const basket = document.querySelector(`.basket-link`);
 const modalClose = inBasketModal.querySelector(`.modal-close`);
 
-toBookmarks.addEventListener(`click`, (evt) => {
-  evt.preventDefault();
-  inBasketModal.classList.add(`modal-show`);
-  basket.classList.add(`added`);
+buyButtons.forEach(buyButton => {
+  buyButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    inBasketModal.classList.add(`modal-show`);
+    basket.classList.add(`added`);
+  });
 });
 
 modalClose.addEventListener(`click`, (evt) => {

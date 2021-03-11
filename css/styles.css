@@ -17,11 +17,11 @@
 
     --price-before: #A9A9A9;
     --button-green: #63A63E;
-    --feature-materials: #FFBF47;
-    --feature-tools: #3BBCE3;
-    --feature-technique: #DC91D8;
-    --feature-discounts: #8ED78F;
-    --feature-delivery: #FFC047;
+    --feature-first: #FFBF47;
+    --feature-second: #3BBCE3;
+    --feature-third: #DC91D8;
+    --feature-fifth: #8ED78F;
+    --feature-sixth: #FFC047;
 
     --button-green-hover:#5FBB2D;
     --button-green-click: #518534;
@@ -32,7 +32,7 @@
 
     --header-interactive: rgba(255, 255, 255, 0.5);
     --credentials-link-click: #C5C5C5;
-    --open-catalog-hover: #CA2C37;
+    --red-button-hover: #CA2C37;
     --red-button-click: #BA2732;
     --links-header-interactive: #161D29;
 
@@ -538,16 +538,16 @@
     color: var(--basic-white);
   }
 
-  .first {
-    background-color: var(--feature-materials);
-    position: relative;
-  }
-
-   .feature-item::after {
+  .feature-item::after {
     content: "";
     position: absolute;
-    top: 27px;
-    right: 27px;
+    top: 30px;
+    right: 30px;
+  }
+
+  .first {
+    background-color: var(--feature-first);
+    position: relative;
   }
 
   .first:after {
@@ -557,7 +557,7 @@
   }
 
   .second {
-    background-color: var(--feature-tools);
+    background-color: var(--feature-second);
   }
 
   .second:after {
@@ -567,7 +567,7 @@
   }
 
   .third {
-    background-color: var(--feature-technique);
+    background-color: var(--feature-third);
     position: relative;
   }
 
@@ -678,6 +678,14 @@
     background-color: var(--special);
   }
 
+  .red-button:hover {
+    background-color: var(--red-button-hover);
+  }
+
+  .red-button:active {
+    background-color: var(--red-button-click);
+  }
+
   .open-catalog {
     position: absolute;
     bottom: 27px;
@@ -686,16 +694,8 @@
     z-index: 2;
   }
 
-  .open-catalog:hover {
-    background-color: var(--open-catalog-hover);
-  }
-
-  .open-catalog:active {
-    background-color: var(--red-button-click);
-  }
-
   .fifth {
-    background-color: var(--feature-discounts);
+    background-color: var(--feature-fifth);
     position: relative;
   }
 
@@ -706,7 +706,7 @@
   }
 
   .sixth {
-    background-color: var(--feature-delivery);
+    background-color: var(--feature-sixth);
     position: relative;
   }
 
@@ -1668,7 +1668,7 @@
     background-repeat: no-repeat;
   }
 
-  .new-item::after {
+  .new-item::before {
     content: "";
     position: absolute;
     background-image: url(../img/catalogue_new.svg);
@@ -1699,7 +1699,6 @@
   .pagination-item a {
     display: block;
     padding: 10px 15px;
-    padding: auto;
     font: 13px/18px var(--alternative-font);
     text-transform: uppercase;
     text-align: center;

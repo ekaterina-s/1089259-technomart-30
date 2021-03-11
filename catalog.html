@@ -13,7 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body class="page-body">
   <header class="main-header">
@@ -169,7 +169,6 @@
           </div>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <!-- это по хуверу -->
               <div class="catalog-detail">
                 <button class="buy">Купить</button>
                 <button class="to-bookmarks">В закладки</button>
@@ -390,6 +389,7 @@
   </footer>
 
   <section class="modal modal-in-basket">
+    <h2 class="visually-hidden">Товар добавлен в корзину</h2>
     <p class="good-added">Товар добавлен в корзину!</p>
     <div class="wrapper-bottom">
       <a class="red-button to-order" href="#">Оформить заказ</a>
@@ -397,7 +397,7 @@
     </div>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
-  <script src="js/item-added.js"></script>
+  <script src="js/item-added.min.js"></script>
 </body>
 
 </html>
