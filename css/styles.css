@@ -62,7 +62,7 @@
     --services-inset-shadow: #405069;
 
     --main-font: "Cuprum", "Arial", sans-serif;
-    --alternative-font: "PT Sans", sans-serif;
+    --alternative-font: "PT Sans", "Arial", sans-serif;
   }
 
   /* Global */
@@ -560,7 +560,7 @@
     content: "";
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 35px;
   }
 
   .first {
@@ -626,12 +626,12 @@
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 5px;
-    font: 700 36px/36px 'Cuprum', sans-serif;
+    font: 700 36px/36px var(--main-font);
   }
 
   .slider-description {
     margin: 0;
-    font: 18px/24px 'Cuprum', sans-serif;
+    font: 18px/24px var(--main-font);
   }
 
   .slider-img {
@@ -741,7 +741,6 @@
     width: 135px;
     display: block;
     font: 14px/18px var(--main-font);
-    font-family: "Cuprum", "Arial", sans-serif;
     text-align: center;
     text-transform: uppercase;
     color: var(--basic-white);
@@ -890,10 +889,6 @@
     background-color: var(--basic-extra-dark);
   }
 
-  .services-button:focus {
-    outline: none;
-  }
-
   .services-delivery {
     padding-left: 80px;
     position: relative;
@@ -1008,6 +1003,7 @@
 
   .more-about-company {
     display: inline-block;
+    vertical-align: baseline;
     padding: 11px 40px 9px 40px;
   }
 
@@ -1248,10 +1244,7 @@
   .filters {
     padding: 0;
     margin: 0;
-    font-family: "PT Sans", sans-serif;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    font: 13px/18px var(--alternative-font);
     color: var(--basic-black);
     text-transform: uppercase;
   }
